@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <style>
+        .black_overlay{
+            display: none;
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            width: 100%;
+            height:100%;
+            background-color: black;
+            z-index:1001;
+            -moz-opacity: 0.8;
+            opacity:.20;
+            filter: alpha(opacity=80);
+        }
+        .white_content {
+            display: none;
+            position: absolute;
+            top: 32%;
+            left: 45%;
+            width: 30%;
+            background-color: white;
+            z-index:1002;
+            overflow: auto;
+        }
+    </style>
+
+</head>
+<!-- BEGIN BODY -->
+<div class="page-header-fixed" onload="getsession();">
+    <div class="container-fluid">
+        <div >
+            <h4 class="text-success">
+                请输入短信内容
+            </h4>
+        </div>
+        <div>
+            <textarea name="smsContent" id="smsContent" style="height:100px;width: 100%;" onfocus="if(value=='请输入短信内容'){value=''}" onblur="if (value ==''){value='请输入短信内容'}">请输入短信内容</textarea>
+            <input type="hidden" name="tip" value="0" />
+        </div>
+        <div >
+            <h4 class="text-warning">
+                请输入手机号列表, 以逗号分开; 如:13800138000;13800138001
+            </h4>
+        </div>
+        <div>
+            <textarea name="smsContent" id="mobileList" style="height:100px;width: 100%;" onfocus="if(value=='请输入手机号列表'){value=''}" onblur="if (value ==''){value='请输入手机号列表'}">请输入手机号列表</textarea>
+            <input type="hidden" name="tip" value="0" />
+        </div>
+        <div>
+            <button class="btn-success" type="button" id="submit"> 发 送 </button>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

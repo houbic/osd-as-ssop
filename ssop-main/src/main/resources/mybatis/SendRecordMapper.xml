@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bink.mybatis.SendRecordMapper">
+
+	<!-- 映射返回字段类型 -->
+	<resultMap type="com.bink.entity.SmsSendRecord"
+		id="entityMapper">
+		<result property="accountId" column="account_id" />
+		<result property="name" column="name" />
+		<result property="count" column="count" />
+		<result property="descMobiles" column="desc_mobiles" />
+		<result property="sendContent" column="send_content" />
+		<result property="sendTime" column="send_time" />
+	</resultMap>
+
+	<select id="querySendRecord" resultMap="entityMapper">
+		SELECT  account_id, name, count, desc_mobiles, send_content, send_time
+		FROM msg_send_record
+		  WHERE account_id = #{accountId}
+		  ORDER BY send_time DESC
+	</select>
+
+</mapper>

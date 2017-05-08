@@ -1,0 +1,8 @@
+rootProject.name = 'osd-as-ssop'
+include 'ssop-main'
+include 'ssop-service-api'
+include 'ssop-services'
+include 'ssop-service-tools'
+include 'ssop-service-tools'
+include 'ssop-service-data'
+

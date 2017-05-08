@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bink.mybatis.MenuMapper">
+
+	<!-- 映射返回字段类型 -->
+	<resultMap type="com.bink.entity.Menu"
+		id="menuResultMapper">
+		<result property="menuId" column="menu_id" />
+		<result property="parentId" column="parent_id" />
+		<result property="menuName" column="menu_name" />
+		<result property="roleType" column="role_type" />
+		<result property="htmlPath" column="html_path" />
+		<result property="imagePath" column="image_path" />
+	</resultMap>
+
+	<select id="getMenuByRoleType" resultMap="menuResultMapper">
+		SELECT  menu_id, parent_id, menu_name, role_type, html_path, image_path
+		FROM msg_menu
+		  WHERE role_type IN
+		  <foreach collection="list" item="roleType" index="index"
+				   open="(" close=")" separator=",">
+			  #{roleType}
+		  </foreach> AND effective=1
+		  ORDER BY parent_id, menu_id
+	</select>
+
+</mapper>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bink.mybatis.PriceConfigMapper">
+
+	<!-- 映射返回字段类型 -->
+	<resultMap type="com.bink.entity.PriceConfig"
+		id="entityMapper">
+		<result property="startCount" column="start_count" />
+		<result property="endCount" column="end_count" />
+		<result property="price" column="price" />
+		<result property="version" column="version" />
+		<result property="addTime" column="add_time" />
+	</resultMap>
+
+	<select id="queryPriceConfigs" parameterType="int" resultMap="entityMapper">
+		SELECT  start_count, end_count, price, version, add_time
+		FROM msg_price_cfg
+		  WHERE version=#{version}
+	</select>
+
+	<select id="queryMaxVersion" resultType="int">
+		SELECT  MAX(version)
+		FROM msg_price_cfg
+	</select>
+
+</mapper>
