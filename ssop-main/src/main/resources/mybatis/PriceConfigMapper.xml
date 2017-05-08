@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>  
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.bink.mybatis.PriceConfigMapper">
+<mapper namespace="com.osd.ssop.mybatis.PriceConfigMapper">
 
 	<!-- 映射返回字段类型 -->
-	<resultMap type="com.bink.entity.PriceConfig"
+	<resultMap type="com.osd.ssop.entity.PriceConfig"
 		id="entityMapper">
 		<result property="startCount" column="start_count" />
 		<result property="endCount" column="end_count" />
