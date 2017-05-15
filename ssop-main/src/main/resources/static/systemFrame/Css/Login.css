@@ -1,0 +1,285 @@
+﻿body, td, th
+{
+    font-size: 12px;
+    color: #FFFFFF;
+}
+
+body
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+a
+{
+    font-family: 宋体;
+    font-size: 12px;
+}
+
+    a:hover
+    {
+        color: #006699;
+    }
+
+#divLogin
+{
+    position: relative;
+    width: 100%;
+    min-width: 1200px;
+}
+
+    #divLogin .content, #divLogin img
+    {
+        position: absolute;
+    }
+
+        #divLogin img.bg
+        {
+            width: 1920px;
+            height: 920px;
+        }
+
+    #divLogin .login-content
+    {
+        left: 20%;
+    }
+
+        #divLogin .login-content img.bg
+        {
+            width: 1155px;
+            height: 554px;
+        }
+
+        #divLogin .login-content table
+        {
+            position: absolute;
+            border-collapse: collapse;
+        }
+
+            #divLogin .login-content table td
+            {
+                vertical-align: top;
+                margin:0px;
+                padding: 0px;
+                padding-top: 2px;
+            }
+
+        #divLogin .login-content .input
+        {
+            border: none;
+            background: transparent;
+            background-image:url("../images/Login/tranparent-input.png");
+            color: white;
+        }
+
+    #divLogin .changepwd-content
+    {
+        left: 35%;
+    }
+
+        #divLogin .changepwd-content img.bg
+        {
+            width: 592px;
+            height: 523px;
+            margin: 0px;
+            left: 0px;
+            top:20px;
+        }
+
+        #divLogin .changepwd-content table
+        {
+            position: absolute;
+            border-collapse: collapse;
+        }
+
+            #divLogin .changepwd-content table td
+            {
+                vertical-align: top;
+                padding: 0px;
+                padding-top: 2px;
+            }
+
+        #divLogin .changepwd-content .input
+        {
+            border: none;
+            background: transparent;
+            background-image:url("../images/Login/tranparent-input.png");
+            color: white;
+        }
+
+    #divLogin .copyright
+    {
+        position: absolute;
+        width: 100%;
+        color: #6E6E6E;
+        text-align: center;
+        font-size: 12px;
+    }
+
+        #divLogin .copyright img
+        {
+            position: absolute;
+            left: 65%;
+            top: 0px;
+        }
+
+
+.bj
+{
+    background-image: url(../images/Login/bj1.jpg);
+    background-repeat: no-repeat;
+    height: 136px;
+    width: 1003px;
+    margin: auto;
+    clear: both;
+}
+
+.top
+{
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    padding-top: 5%;
+}
+
+.top_logo
+{
+    float: left;
+    margin-left: 20%;
+}
+
+.top1
+{
+    float: right;
+    font-family: 微软雅黑 宋体;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    width: 200px;
+    color: #fff;
+    text-decoration: none;
+    margin-right: 22%;
+    margin-top: 2%;
+    position:relative;
+}
+
+    .top1 a
+    {
+        font-family: 微软雅黑 宋体;
+        font-size: 13px;
+        font-weight: bold;
+        display: inline-block;
+        width: 100px;
+        height: 25px;
+        line-height: 25px;
+        color: #fff;
+        text-decoration: none;
+    }
+    .top1  span.bg
+    {
+        display: inline-block;
+        height: 25px;
+        width:200px;
+        position:absolute;
+        background: #ccc;
+        opacity:0.15;
+        border-bottom:1px solid #999;
+        left:0px;
+
+    }
+
+    .top1 span.menu
+    {
+        display: inline-block;
+        height: 25px;
+        position:absolute;
+        left:0px;
+
+    }
+
+    .top1 a:hover
+    {
+        background: #000;      
+        color: #fff;
+        opacity:0.5;
+    }
+
+    .top1 a.selected
+    {
+        background: #000;
+        color: #fff;
+        opacity:0.3;
+    }
+
+.fisheye
+{
+    position: absolute;
+}
+
+.font
+{
+    font-family: "宋体";
+    font-size: 14px;
+    color: #FFFFFF;
+    text-decoration: none;
+    line-height: 20px;
+}
+
+.font1
+{
+    font-family: "宋体";
+    font-size: 14px;
+    color: #2173b6;
+    text-decoration: none;
+    line-height: 20px;
+}
+
+#test
+{
+    margin: 0 auto;
+}
+
+.grxx_1
+{
+    width: 150px;
+    padding-top: 100px;
+    margin: auto;
+    clear: both;
+}
+
+    .grxx_1 ul
+    {
+        margin: 0px;
+        padding: 0px;
+        list-style-type: none;
+        text-align: left;
+    }
+
+    .grxx_1 li
+    {
+        color: #2173b6;
+        font-family: "宋体";
+        font-size: 14px;
+        margin-top: 15px;
+        width: 230px;
+    }
+
+.grxx_2
+{
+    border: 1px solid #0aa8e0;
+}
+
+.tb1
+{
+    background-image: url(../images/Login/in_11.gif);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+
+.gdxtqx_01
+{
+    width: 454px;
+    margin: auto;
+    padding-top: 130px;
+    padding-left: 20px;
+}

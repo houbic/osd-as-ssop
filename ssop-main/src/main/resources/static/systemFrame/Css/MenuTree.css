@@ -1,0 +1,49 @@
+﻿.stylespan
+ {
+   font: normal 11px arial, tahoma, helvetica, sans-serif;
+ }
+
+.stylediv
+{
+  vertical-align: bottom;
+  margin-top:0px; 
+  height:18px;
+  border-width:0px 0px 0px 0px;
+
+}
+
+.Node-selected
+ {        
+        vertical-align: bottom;
+		text-align:center;
+		border:1px solid #000000;
+		background-color:#EAEAEA;
+		font: normal 11px arial, tahoma, helvetica, sans-serif;
+ }
+	
+.Node-unselect
+	{
+	    text-align:center;
+		border:0px solid #FFFFFF;
+		background-color:transparent;
+	    font: normal 11px arial, tahoma, helvetica, sans-serif;
+		vertical-align: bottom;
+	}
+
+a {  color: #000000; text-decoration: none;cursor: hand}
+
+a:hover {  color: #000000; text-decoration: none;cursor:hand}
+
+.img
+{
+  border:0px 0px 0px 0px;
+  width:18px;
+  height:18px;
+}
+
+.imgDef
+{
+  border:0px 0px 0px 0px;
+  width:16px;
+  height:16px;
+}

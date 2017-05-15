@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.osd.ssop.mybatis.systemFrame.SystemAppMapper">
+
+	<!-- 映射返回字段类型 -->
+	<resultMap type="com.osd.ssop.entity.systemFrame.SystemApp"
+		id="resultMapper">
+		<result property="systemId" column="FA_ID" />
+		<result property="systemName" column="FA_Name" />
+		<result property="url" column="FA_Url" />
+		<result property="isDisplay" column="FA_Isdisplay" />
+		<result property="isRight" column="FA_IsRight" />
+		<result property="remark" column="FA_Remark" />
+		<result property="index" column="FA_Index" />
+		<result property="bgImg" column="FA_BgImg" />
+		<result property="icoImg" column="FA_IcoImg" />
+		<result property="logOutUrl" column="FA_LoutURL" />
+		<result property="isDefault" column="FA_IsDefault" />
+		<result property="isLogicDel" column="FA_IsLogicDel" />
+	</resultMap>
+
+	<select id="getSystemApp" resultMap="resultMapper">
+		SELECT  FA_ID, FA_Name, FA_Url, FA_Isdisplay, FA_IsRight,
+		 FA_Remark,FA_Index, FA_BgImg, FA_IcoImg, FA_LoutURL, FA_IsDefault, FA_IsLogicDel
+		FROM System_FrameApplication
+		  WHERE FA_IsLogicDel=0 and FA_ID IN
+		<foreach collection="list" item="systemId" index="index"
+				 open="(" close=")" separator=",">
+			#{systemId}
+		</foreach>
+	</select>
+
+</mapper>

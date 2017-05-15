@@ -1,0 +1,33 @@
+﻿
+A:active 
+{
+	color: #000000; text-decoration: none
+}
+A:hover 
+{
+	color: #000000; text-decoration: none
+}
+A:link 
+{
+	color: #000000; text-decoration: none
+}
+A:visited 
+{
+	color: #000000; text-decoration: none
+}
+TD 
+{
+	font-size: 12px; font-family: "Verdana", "Arial", "细明体", "sans-serif"
+}
+.tdMiddle
+{
+	background-color:#FFFFFF; 
+	border-right:1px solid #C7C5D9;
+	width:11px;
+}
+.tdMenuTitle
+{
+	cursor: pointer; 
+	color: #000000; 
+	padding-top: 4px
+}

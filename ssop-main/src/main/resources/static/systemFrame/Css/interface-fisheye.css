@@ -1,0 +1,75 @@
+.fisheye
+{
+    text-align: center;
+    height: 50px;
+    width: 100%;
+}
+
+A.fisheyeItem
+{
+    position: absolute;
+    text-align: center;
+    width: 40px;
+    display: block;
+    color: #000;
+    top: 0px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a.fisheyeItem2
+{
+    position: absolute;
+    text-align: center;
+    width: 40px;
+    bottom: 0px;
+    display: block;
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.fisheyeItem img
+{
+    margin: 0px;
+    width: 100%;
+    border: none;
+    left:0px;
+}
+
+.fisheyeItem2 img
+{
+    BORDER-BOTTOM: medium none;
+    BORDER-LEFT: medium none;
+    MARGIN: 5px auto 0px;
+    width: 100%;
+    BORDER-TOP: medium none;
+    BORDER-RIGHT: medium none;
+}
+
+.fisheyeItem SPAN
+{
+    display: none;
+    position: absolute;
+}
+
+.fisheyeItem2 SPAN
+{
+    display: none;
+    position: absolute;
+}
+
+.fisheyeContainter
+{
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    left: 500px;
+}
+
+#fisheye2
+{
+    position: absolute;
+    width: 100%;
+    BOTTOM: 0px;
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.osd.ssop.mybatis.systemFrame.SystemRoleMapper">
+
+	<!-- 映射返回字段类型 -->
+	<resultMap type="com.osd.ssop.entity.systemFrame.SystemRole"
+		id="resultMapper">
+		<result property="roleId" column="SR_ID" />
+		<result property="systemId" column="FA_ID" />
+		<result property="roleName" column="SR_Name" />
+		<result property="roleRemark" column="SR_Remark" />
+		<result property="isDel" column="SR_IsDel" />
+	</resultMap>
+
+	<select id="getRoleList" resultMap="resultMapper">
+		SELECT  SR_ID, FA_ID, SR_Name, SR_Remark, SR_IsDel FROM System_Role
+		  WHERE SR_IsDel=0 and SR_ID IN
+		<foreach collection="list" item="roleId" index="index"
+				 open="(" close=")" separator=",">
+			#{roleId}
+		</foreach>
+	</select>
+
+</mapper>

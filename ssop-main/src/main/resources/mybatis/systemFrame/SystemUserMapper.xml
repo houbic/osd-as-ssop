@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.osd.ssop.mybatis.systemFrame.SystemUserMapper">
+
+	<!-- 映射返回字段类型 -->
+	<resultMap type="com.osd.ssop.entity.systemFrame.SystemUser"
+		id="resultMapper">
+		<result property="userId" column="SU_ID" />
+		<result property="departmentId" column="SD_ID" />
+		<result property="userName" column="SU_UserName" />
+		<result property="loginName" column="SU_LoginName" />
+		<result property="password" column="SU_UserPwd" />
+		<result property="fetion" column="SU_Fetion" />
+		<result property="mobile" column="SU_Mobile" />
+		<result property="email" column="SU_Email" />
+		<result property="remark" column="SU_Remark" />
+		<result property="isLogin" column="SU_IsLogin" />
+		<result property="isDel" column="SU_IsDel" />
+		<result property="sex" column="SU_Sex" />
+		<result property="area" column="SA_Area" />
+		<result property="cityArea" column="SA_CityArea" />
+		<result property="companyId" column="SU_CompanyID" />
+	</resultMap>
+
+	<select id="getSystemUser" parameterType="String" resultMap="resultMapper">
+		SELECT  SU_ID, SD_ID, SU_UserName, SU_LoginName, SU_UserPwd, SU_Fetion,
+		SU_Mobile, SU_Email, SU_Remark, SU_IsLogin, SU_IsDel, SU_Sex, SA_Area, SA_CityArea, SU_CompanyID
+		FROM System_Users
+		  WHERE SU_IsLogin=1 and SU_IsDel=0 and SU_LoginName=#{userName}
+	</select>
+
+</mapper>

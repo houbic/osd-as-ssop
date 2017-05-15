@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.osd.ssop.mybatis.systemFrame.RoleUserMapper">
+
+	<!-- 映射返回字段类型 -->
+	<resultMap type="com.osd.ssop.entity.systemFrame.RoleUser"
+		id="resultMapper">
+		<result property="roleId" column="SR_ID" />
+		<result property="userId" column="SU_ID" />
+	</resultMap>
+
+	<select id="getRoleUserList" parameterType="String" resultMap="resultMapper">
+		SELECT  SR_ID, SU_ID FROM System_RoleUser
+		  WHERE SU_ID=#{userId}
+	</select>
+
+</mapper>

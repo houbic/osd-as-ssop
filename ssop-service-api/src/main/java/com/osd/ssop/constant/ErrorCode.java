@@ -5,11 +5,15 @@ package com.osd.ssop.constant;
  */
 public enum ErrorCode {
 
-    USER_LOGIN_SUCCESS(200, "login success"),
+    USER_LOGIN_SUCCESS(200, "success"),
 
-    USER_LOGIN_USERNAME_ERROR(410, "user name not exists"),
+    USER_NOTEXISTS_ERROR(410, "user  not exists"),
 
-    USER_LOGIN_PASSWORD_ERROR(411, "password is incorrect")
+    USER_PWD_ERROR(411, "password error"),
+
+    CODE_VALIDATE_ERROR(412, "codeValidate error"),
+
+    APP_NULL_ERROR(413, "app is null"),
 
     ;
 

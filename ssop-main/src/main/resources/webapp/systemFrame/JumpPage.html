@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1"><title>
+    :::中国移动飞信SSOP管理平台:::
+</title><link href="/systemFrame/css/Login.css" rel="stylesheet" type="text/css" /><link href="/systemFrame/css/interface-fisheye.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/systemFrame/js/jquery.js"></script>
+    <script type="text/javascript" src="/systemFrame/js/BGConfig.js"></script>
+    <script type="text/javascript" src="/systemFrame/js/interface.js"></script>
+    <script type="text/javascript">
+    </script>
+</head>
+<body>
+<form name="form1" method="post" action="JumpPage.aspx" id="form1">
+
+    <div id="divLogin">
+        <div class="top">
+            <div class="top_logo">
+
+            </div>
+            <div class="top1">
+                <span>欢迎！超级管理员！</span>
+                <br />
+                <span class="bg"></span>
+                <span class="menu"><a href="ChangePassword.aspx" target="_blank">修改密码</a><a style="cursor: pointer;" href="LogOut">退出</a></span>
+            </div>
+            <div style="clear:both;">
+                <marquee onmouseover="this.stop();" onmouseout="this.start();" style="width: 500px; height: 100px; left: 100px;" direction="up" scrollamount="3" scrolldelay="100"></marquee>
+            </div>
+        </div>
+        <div id="fisheye" class="fisheye">
+            <div class="fisheyeContainter">
+                <#list apps as app>
+                    <a class="fisheyeItem"  href="${app.url}"><img  src="/systemFrame/images/Login/${app.systemId}.png" alt="${app.systemName}"  /></a>
+                </#list>
+            </div>
+        </div>
+        <div class="copyright">
+            中国移动版权所有<br />
+            <br />
+            copyright&copy;2004-2008 .All rights reserved. 京ICP备05024888号
+            <img alt="中国移动通信" src="/systemFrame/images/Login/cmcc-logo.png" />
+        </div>
+    </div>
+</form>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#fisheye').Fisheye(
+                {
+                    maxWidth: 60,
+                    items: 'a',
+                    itemsText: 'span',
+                    container: '.fisheyeContainter',
+                    itemWidth: 177,
+                    proximity: 80,
+                    halign: 'center'
+                }
+        )
+
+    });
+</script>
+</body>
+</html>
